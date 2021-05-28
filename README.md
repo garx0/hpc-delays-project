@@ -1,6 +1,7 @@
 # hpc-delays-project
 
 Attempt to parallelize https://github.com/garx0/graduate-work/tree/master/delaytool project with OpenMP to speed up longer calculations of delay estimates in real-time network.
+Project presentation with its description: https://docs.google.com/presentation/d/1w3GfoYDi8lSjZY38IGjVViFYd_6JAO68ka_OwdLPquE
 
 Working for schemes (`-s`) oqp, oqc now.
 
