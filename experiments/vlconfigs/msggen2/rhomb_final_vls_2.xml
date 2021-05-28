@@ -1,0 +1,521 @@
+<afdxxml name="test project">
+    <resources>
+        <switch name="switch1" number="1" ports="1,2,3,4" x="143.5" y="237.5"/>
+        <switch name="switch2" number="2" ports="5,6,7,8" x="208.5" y="188.5"/>
+        <switch name="switch3" number="3" ports="9,10,11,12" x="269.5" y="241.5"/>
+        <switch name="switch4" number="4" ports="13,14,15,16" x="206.5" y="295.5"/>
+        <endSystem name="endSystem1" number="5" ports="17" x="77.5" y="237.5"/>
+        <endSystem name="endSystem2" number="6" ports="18" x="208.5" y="131.5"/>
+        <endSystem name="endSystem3" number="7" ports="19" x="336.5" y="236.5"/>
+        <endSystem name="endSystem4" number="8" ports="20" x="201.5" y="358.5"/>
+        <partition connectedTo="5" name="partition1" number="9" x="18.5" y="236.5"/>
+        <partition connectedTo="6" name="partition2" number="10" x="211.5" y="64.5"/>
+        <partition connectedTo="7" name="partition3" number="11" x="403.5" y="237.5"/>
+        <partition connectedTo="8" name="partition4" number="12" x="194.5" y="422.5"/>
+        <link capacity="12500" from="1" fromType="0" to="5" toType="0"/>
+        <link capacity="12500" from="6" fromType="0" to="9" toType="0"/>
+        <link capacity="12500" from="10" fromType="0" to="13" toType="0"/>
+        <link capacity="12500" from="14" fromType="0" to="2" toType="0"/>
+        <link capacity="12500" from="3" fromType="0" to="11" toType="0"/>
+        <link capacity="12500" from="7" fromType="0" to="15" toType="0"/>
+        <link capacity="12500" from="4" fromType="0" to="17" toType="0"/>
+        <link capacity="12500" from="8" fromType="0" to="18" toType="0"/>
+        <link capacity="12500" from="12" fromType="0" to="19" toType="0"/>
+        <link capacity="12500" from="16" fromType="0" to="20" toType="0"/>
+    </resources>
+    <virtualLinks>
+        <virtualLink bag="128" dest="5,6,8" id="Designed for Data Flow 1" lmax="1008" number="1" responseTime="5305" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,6,7" id="Designed for Data Flow 2" lmax="1518" number="2" responseTime="4687" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+            <path dest="6" path="16,7,18" source="8"/>
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="5,6,8" id="Designed for Data Flow 3" lmax="553" number="3" responseTime="5507" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,6,15,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="6,7,8" id="Designed for Data Flow 4" lmax="808" number="4" responseTime="4861" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="7" path="4,5,9,19" source="5"/>
+            <path dest="8" path="4,5,9,13,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,6,8" id="Designed for Data Flow 5" lmax="779" number="5" responseTime="5507" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,6,15,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="7" id="Designed for Data Flow 6" lmax="679" number="6" responseTime="3966" source="6" lmin="64">
+            <path dest="7" path="8,9,19" source="6"/>
+        </virtualLink>
+        <virtualLink bag="16" dest="6,7,8" id="Designed for Data Flow 7" lmax="757" number="7" responseTime="4554" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="7" path="4,5,9,19" source="5"/>
+            <path dest="8" path="4,5,15,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="6" id="Designed for Data Flow 8" lmax="1100" number="8" responseTime="4687" source="8" lmin="64">
+            <path dest="6" path="16,7,18" source="8"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="5,6" id="Designed for Data Flow 9" lmax="748" number="9" responseTime="4687" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+            <path dest="6" path="16,7,18" source="8"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="5,6,8" id="Designed for Data Flow 10" lmax="691" number="10" responseTime="5305" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="5" id="Designed for Data Flow 11" lmax="1371" number="11" responseTime="4280" source="6" lmin="64">
+            <path dest="5" path="8,1,17" source="6"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="6,7,8" id="Designed for Data Flow 12" lmax="1028" number="12" responseTime="4554" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="7" path="4,5,9,19" source="5"/>
+            <path dest="8" path="4,5,15,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="16" dest="5,7,8" id="Designed for Data Flow 13" lmax="805" number="13" responseTime="4280" source="6" lmin="64">
+            <path dest="5" path="8,1,17" source="6"/>
+            <path dest="7" path="8,9,19" source="6"/>
+            <path dest="8" path="8,15,20" source="6"/>
+        </virtualLink>
+        <virtualLink bag="16" dest="5" id="Designed for Data Flow 14" lmax="1223" number="14" responseTime="4280" source="6" lmin="64">
+            <path dest="5" path="8,1,17" source="6"/>
+        </virtualLink>
+        <virtualLink bag="16" dest="5,6,8" id="Designed for Data Flow 15" lmax="1210" number="15" responseTime="5533" source="7" lmin="64">
+            <path dest="5" path="12,6,1,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,6,8" id="Designed for Data Flow 16" lmax="1380" number="16" responseTime="5507" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,6,15,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="2" dest="5,6" id="Designed for Data Flow 17" lmax="1012" number="17" responseTime="4687" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+            <path dest="6" path="16,7,18" source="8"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="5,7,8" id="Designed for Data Flow 18" lmax="1375" number="18" responseTime="4280" source="6" lmin="64">
+            <path dest="5" path="8,1,17" source="6"/>
+            <path dest="7" path="8,9,19" source="6"/>
+            <path dest="8" path="8,15,20" source="6"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="8" id="Designed for Data Flow 19" lmax="153" number="19" responseTime="3381" source="5" lmin="64">
+            <path dest="8" path="4,14,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="7" id="Designed for Data Flow 20" lmax="987" number="20" responseTime="4001" source="8" lmin="64">
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,7" id="Designed for Data Flow 21" lmax="653" number="21" responseTime="4600" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="7" id="Designed for Data Flow 22" lmax="765" number="22" responseTime="3966" source="6" lmin="64">
+            <path dest="7" path="8,9,19" source="6"/>
+        </virtualLink>
+        <virtualLink bag="16" dest="6" id="Designed for Data Flow 23" lmax="831" number="23" responseTime="5305" source="7" lmin="64">
+            <path dest="6" path="12,6,18" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,7" id="Designed for Data Flow 24" lmax="619" number="24" responseTime="4600" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="7" id="Designed for Data Flow 25" lmax="1340" number="25" responseTime="3966" source="6" lmin="64">
+            <path dest="7" path="8,9,19" source="6"/>
+        </virtualLink>
+        <virtualLink bag="2" dest="5,6,8" id="Designed for Data Flow 26" lmax="1265" number="26" responseTime="5545" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,3,5,18" source="7"/>
+            <path dest="8" path="12,3,14,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,6" id="Designed for Data Flow 27" lmax="1042" number="27" responseTime="4687" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+            <path dest="6" path="16,7,18" source="8"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="8" id="Designed for Data Flow 28" lmax="892" number="28" responseTime="4902" source="7" lmin="64">
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="7" id="Designed for Data Flow 29" lmax="843" number="29" responseTime="3966" source="6" lmin="64">
+            <path dest="7" path="8,9,19" source="6"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="6,7,8" id="Designed for Data Flow 30" lmax="1141" number="30" responseTime="4861" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="7" path="4,5,9,19" source="5"/>
+            <path dest="8" path="4,5,9,13,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,6,8" id="Designed for Data Flow 31" lmax="954" number="31" responseTime="5507" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,6,15,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,8" id="Designed for Data Flow 32" lmax="881" number="32" responseTime="5030" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="8" id="Designed for Data Flow 33" lmax="1015" number="33" responseTime="4255" source="6" lmin="64">
+            <path dest="8" path="8,15,20" source="6"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,8" id="Designed for Data Flow 34" lmax="1178" number="34" responseTime="5030" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,6,8" id="Designed for Data Flow 35" lmax="238" number="35" responseTime="5305" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="5,6" id="Designed for Data Flow 37" lmax="782" number="37" responseTime="5305" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="6,7,8" id="Designed for Data Flow 38" lmax="1280" number="38" responseTime="4351" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="7" path="4,11,19" source="5"/>
+            <path dest="8" path="4,11,13,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="5" id="Designed for Data Flow 39" lmax="647" number="39" responseTime="4600" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+        </virtualLink>
+        <virtualLink bag="16" dest="5" id="Designed for Data Flow 40" lmax="1119" number="40" responseTime="5533" source="7" lmin="64">
+            <path dest="5" path="12,6,1,17" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="6" id="Designed for Data Flow 41" lmax="1390" number="41" responseTime="5304" source="7" lmin="64">
+            <path dest="6" path="12,6,18" source="7"/>
+        </virtualLink>
+        <virtualLink bag="4" dest="6,7,8" id="Designed for Data Flow 42" lmax="663" number="42" responseTime="4745" source="5" lmin="64">
+            <path dest="6" path="4,11,6,18" source="5"/>
+            <path dest="7" path="4,11,19" source="5"/>
+            <path dest="8" path="4,11,6,15,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="5,8" id="Designed for Data Flow 43" lmax="827" number="43" responseTime="5030" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="5,6" id="Designed for Data Flow 44" lmax="605" number="44" responseTime="5305" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,6,8" id="Designed for Data Flow 45" lmax="207" number="45" responseTime="5508" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,6,15,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="7" id="Designed for Data Flow 46" lmax="998" number="46" responseTime="4001" source="8" lmin="64">
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="16" dest="5" id="Designed for Data Flow 47" lmax="626" number="47" responseTime="4600" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,7,8" id="Designed for Data Flow 48" lmax="425" number="48" responseTime="4563" source="6" lmin="64">
+            <path dest="5" path="8,1,17" source="6"/>
+            <path dest="7" path="8,9,19" source="6"/>
+            <path dest="8" path="8,9,13,20" source="6"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="6,7" id="Designed for Data Flow 49" lmax="597" number="49" responseTime="4687" source="8" lmin="64">
+            <path dest="6" path="16,7,18" source="8"/>
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="6" id="Designed for Data Flow 50" lmax="1015" number="50" responseTime="5304" source="7" lmin="64">
+            <path dest="6" path="12,6,18" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5" id="Designed for Data Flow 51" lmax="1361" number="51" responseTime="4280" source="6" lmin="64">
+            <path dest="5" path="8,1,17" source="6"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="5,6,8" id="Designed for Data Flow 52" lmax="550" number="52" responseTime="5508" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,6,15,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="6,8" id="Designed for Data Flow 53" lmax="179" number="53" responseTime="5507" source="7" lmin="64">
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,6,15,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="6" id="Designed for Data Flow 54" lmax="747" number="54" responseTime="5305" source="7" lmin="64">
+            <path dest="6" path="12,6,18" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,6,8" id="Designed for Data Flow 55" lmax="93" number="55" responseTime="5508" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,6,15,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="16" dest="7,8" id="Designed for Data Flow 56" lmax="1117" number="56" responseTime="4139" source="5" lmin="64">
+            <path dest="7" path="4,11,19" source="5"/>
+            <path dest="8" path="4,11,13,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,6,8" id="Designed for Data Flow 57" lmax="1347" number="57" responseTime="5305" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="6,7" id="Designed for Data Flow 58" lmax="694" number="58" responseTime="4351" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="7" path="4,5,9,19" source="5"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="8" id="Designed for Data Flow 59" lmax="1251" number="59" responseTime="4902" source="7" lmin="64">
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="6" id="Designed for Data Flow 60" lmax="1357" number="60" responseTime="4351" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="6,7,8" id="Designed for Data Flow 61" lmax="726" number="61" responseTime="4861" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="7" path="4,5,9,19" source="5"/>
+            <path dest="8" path="4,5,9,13,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="8" dest="6,7" id="Designed for Data Flow 62" lmax="560" number="62" responseTime="5001" source="8" lmin="64">
+            <path dest="6" path="16,10,6,18" source="8"/>
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="6" id="Designed for Data Flow 63" lmax="662" number="63" responseTime="4687" source="8" lmin="64">
+            <path dest="6" path="16,7,18" source="8"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,6" id="Designed for Data Flow 64" lmax="1394" number="64" responseTime="4687" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+            <path dest="6" path="16,7,18" source="8"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,6" id="Designed for Data Flow 65" lmax="948" number="65" responseTime="4687" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+            <path dest="6" path="16,7,18" source="8"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5" id="Designed for Data Flow 66" lmax="1410" number="66" responseTime="4280" source="6" lmin="64">
+            <path dest="5" path="8,1,17" source="6"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="6,7,8" id="Designed for Data Flow 67" lmax="433" number="67" responseTime="4350" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="7" path="4,11,19" source="5"/>
+            <path dest="8" path="4,11,13,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="5,6" id="Designed for Data Flow 68" lmax="995" number="68" responseTime="4688" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+            <path dest="6" path="16,7,18" source="8"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="5" id="Designed for Data Flow 69" lmax="893" number="69" responseTime="5030" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="6,7" id="Designed for Data Flow 70" lmax="564" number="70" responseTime="4687" source="8" lmin="64">
+            <path dest="6" path="16,7,18" source="8"/>
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="6,7" id="Designed for Data Flow 71" lmax="1109" number="71" responseTime="4542" source="5" lmin="64">
+            <path dest="6" path="4,11,6,18" source="5"/>
+            <path dest="7" path="4,11,19" source="5"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="7" id="Designed for Data Flow 72" lmax="1314" number="72" responseTime="4002" source="8" lmin="64">
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,6,7" id="Designed for Data Flow 73" lmax="804" number="73" responseTime="4687" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+            <path dest="6" path="16,7,18" source="8"/>
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="6" id="Designed for Data Flow 74" lmax="1331" number="74" responseTime="4687" source="8" lmin="64">
+            <path dest="6" path="16,7,18" source="8"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="8" id="Designed for Data Flow 75" lmax="1116" number="75" responseTime="4901" source="7" lmin="64">
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="7" id="Designed for Data Flow 76" lmax="944" number="76" responseTime="3966" source="6" lmin="64">
+            <path dest="7" path="8,9,19" source="6"/>
+        </virtualLink>
+        <virtualLink bag="16" dest="8" id="Designed for Data Flow 77" lmax="976" number="77" responseTime="4902" source="7" lmin="64">
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="5,7,8" id="Designed for Data Flow 78" lmax="701" number="78" responseTime="4281" source="6" lmin="64">
+            <path dest="5" path="8,1,17" source="6"/>
+            <path dest="7" path="8,9,19" source="6"/>
+            <path dest="8" path="8,15,20" source="6"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="5,7" id="Designed for Data Flow 79" lmax="1041" number="79" responseTime="4600" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="6" id="Designed for Data Flow 80" lmax="1273" number="80" responseTime="5305" source="7" lmin="64">
+            <path dest="6" path="12,6,18" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="7" id="Designed for Data Flow 81" lmax="1016" number="81" responseTime="3543" source="5" lmin="64">
+            <path dest="7" path="4,11,19" source="5"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="5" id="Designed for Data Flow 82" lmax="722" number="82" responseTime="4600" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="5,8" id="Designed for Data Flow 83" lmax="1139" number="83" responseTime="4281" source="6" lmin="64">
+            <path dest="5" path="8,1,17" source="6"/>
+            <path dest="8" path="8,15,20" source="6"/>
+        </virtualLink>
+        <virtualLink bag="16" dest="5,7" id="Designed for Data Flow 84" lmax="551" number="84" responseTime="4281" source="6" lmin="64">
+            <path dest="5" path="8,1,17" source="6"/>
+            <path dest="7" path="8,9,19" source="6"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="5,7" id="Designed for Data Flow 85" lmax="1188" number="85" responseTime="4280" source="6" lmin="64">
+            <path dest="5" path="8,1,17" source="6"/>
+            <path dest="7" path="8,9,19" source="6"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="6,8" id="Designed for Data Flow 86" lmax="833" number="86" responseTime="4553" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="8" path="4,5,15,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="16" dest="8" id="Designed for Data Flow 87" lmax="1378" number="87" responseTime="4901" source="7" lmin="64">
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="6,8" id="Designed for Data Flow 88" lmax="933" number="88" responseTime="5305" source="7" lmin="64">
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="6,8" id="Designed for Data Flow 89" lmax="770" number="89" responseTime="5305" source="7" lmin="64">
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,13,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="7" id="Designed for Data Flow 90" lmax="890" number="90" responseTime="4002" source="8" lmin="64">
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="6,7,8" id="Designed for Data Flow 91" lmax="617" number="91" responseTime="4554" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="7" path="4,11,19" source="5"/>
+            <path dest="8" path="4,5,15,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="6,7" id="Designed for Data Flow 92" lmax="769" number="92" responseTime="4351" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="7" path="4,5,9,19" source="5"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="6,8" id="Designed for Data Flow 93" lmax="559" number="93" responseTime="4553" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="8" path="4,5,15,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="6,7" id="Designed for Data Flow 94" lmax="785" number="94" responseTime="4687" source="8" lmin="64">
+            <path dest="6" path="16,7,18" source="8"/>
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="5,6,8" id="Designed for Data Flow 95" lmax="640" number="95" responseTime="5507" source="7" lmin="64">
+            <path dest="5" path="12,3,17" source="7"/>
+            <path dest="6" path="12,6,18" source="7"/>
+            <path dest="8" path="12,6,15,20" source="7"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="6,7,8" id="Designed for Data Flow 96" lmax="1035" number="96" responseTime="4553" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="7" path="4,11,19" source="5"/>
+            <path dest="8" path="4,5,15,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="128" dest="7" id="Designed for Data Flow 97" lmax="846" number="97" responseTime="4001" source="8" lmin="64">
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+        <virtualLink bag="32" dest="8" id="Designed for Data Flow 98" lmax="1023" number="98" responseTime="4139" source="5" lmin="64">
+            <path dest="8" path="4,11,13,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="6,7,8" id="Designed for Data Flow 99" lmax="739" number="99" responseTime="4553" source="5" lmin="64">
+            <path dest="6" path="4,5,18" source="5"/>
+            <path dest="7" path="4,11,19" source="5"/>
+            <path dest="8" path="4,5,15,20" source="5"/>
+        </virtualLink>
+        <virtualLink bag="64" dest="5,6,7" id="Designed for Data Flow 100" lmax="1030" number="100" responseTime="4687" source="8" lmin="64">
+            <path dest="5" path="16,2,17" source="8"/>
+            <path dest="6" path="16,7,18" source="8"/>
+            <path dest="7" path="16,10,19" source="8"/>
+        </virtualLink>
+    </virtualLinks>
+    <dataFlows>
+        <dataFlow dest="9,10,12" id="Data Flow 1" jMax="0" msgSize="2882" period="483" source="11" tMax="300" vl="1"/>
+        <dataFlow dest="11,10,9" id="Data Flow 2" jMax="0" msgSize="1471" period="351" source="12" tMax="300" vl="2"/>
+        <dataFlow dest="9,12,10" id="Data Flow 3" jMax="0" msgSize="1518" period="226" source="11" tMax="300" vl="3"/>
+        <dataFlow dest="12,10,11" id="Data Flow 4" jMax="0" msgSize="3803" period="171" source="9" tMax="300" vl="4"/>
+        <dataFlow dest="9,10,12" id="Data Flow 5" jMax="0" msgSize="732" period="195" source="11" tMax="300" vl="5"/>
+        <dataFlow dest="11" id="Data Flow 6" jMax="0" msgSize="3156" period="162" source="10" tMax="300" vl="6"/>
+        <dataFlow dest="11,12,10" id="Data Flow 7" jMax="0" msgSize="2128" period="50" source="9" tMax="300" vl="7"/>
+        <dataFlow dest="10" id="Data Flow 8" jMax="0" msgSize="2105" period="75" source="12" tMax="300" vl="8"/>
+        <dataFlow dest="9,10" id="Data Flow 9" jMax="0" msgSize="2102" period="219" source="12" tMax="300" vl="9"/>
+        <dataFlow dest="9,10,12" id="Data Flow 10" jMax="0" msgSize="1930" period="113" source="11" tMax="300" vl="10"/>
+        <dataFlow dest="9" id="Data Flow 11" jMax="0" msgSize="1324" period="108" source="10" tMax="300" vl="11"/>
+        <dataFlow dest="10,11,12" id="Data Flow 12" jMax="0" msgSize="2941" period="388" source="9" tMax="300" vl="12"/>
+        <dataFlow dest="12,9,11" id="Data Flow 13" jMax="0" msgSize="3790" period="84" source="10" tMax="300" vl="13"/>
+        <dataFlow dest="9" id="Data Flow 14" jMax="0" msgSize="1176" period="17" source="10" tMax="300" vl="14"/>
+        <dataFlow dest="9,10,12" id="Data Flow 15" jMax="0" msgSize="3488" period="57" source="11" tMax="300" vl="15"/>
+        <dataFlow dest="12,10,9" id="Data Flow 16" jMax="0" msgSize="1333" period="280" source="11" tMax="300" vl="16"/>
+        <dataFlow dest="10,9" id="Data Flow 17" jMax="0" msgSize="3858" period="9" source="12" tMax="300" vl="17"/>
+        <dataFlow dest="11,12,9" id="Data Flow 18" jMax="0" msgSize="3982" period="107" source="10" tMax="300" vl="18"/>
+        <dataFlow dest="12" id="Data Flow 19" jMax="0" msgSize="106" period="120" source="9" tMax="300" vl="19"/>
+        <dataFlow dest="11" id="Data Flow 20" jMax="0" msgSize="940" period="234" source="12" tMax="300" vl="20"/>
+        <dataFlow dest="9,11" id="Data Flow 21" jMax="0" msgSize="606" period="206" source="12" tMax="300" vl="21"/>
+        <dataFlow dest="11" id="Data Flow 22" jMax="0" msgSize="3588" period="373" source="10" tMax="300" vl="22"/>
+        <dataFlow dest="10" id="Data Flow 23" jMax="0" msgSize="784" period="22" source="11" tMax="300" vl="23"/>
+        <dataFlow dest="9,11" id="Data Flow 24" jMax="0" msgSize="1714" period="425" source="12" tMax="300" vl="24"/>
+        <dataFlow dest="11" id="Data Flow 25" jMax="0" msgSize="3879" period="412" source="10" tMax="300" vl="25"/>
+        <dataFlow dest="10,12,9" id="Data Flow 26" jMax="0" msgSize="2436" period="4" source="11" tMax="300" vl="26"/>
+        <dataFlow dest="10,9" id="Data Flow 27" jMax="0" msgSize="995" period="278" source="12" tMax="300" vl="27"/>
+        <dataFlow dest="12" id="Data Flow 28" jMax="0" msgSize="3378" period="304" source="11" tMax="300" vl="28"/>
+        <dataFlow dest="11" id="Data Flow 29" jMax="0" msgSize="3976" period="382" source="10" tMax="300" vl="29"/>
+        <dataFlow dest="10,11,12" id="Data Flow 30" jMax="0" msgSize="3281" period="221" source="9" tMax="300" vl="30"/>
+        <dataFlow dest="9,12,10" id="Data Flow 31" jMax="0" msgSize="907" period="494" source="11" tMax="300" vl="31"/>
+        <dataFlow dest="9,12" id="Data Flow 32" jMax="0" msgSize="834" period="199" source="11" tMax="300" vl="32"/>
+        <dataFlow dest="12" id="Data Flow 33" jMax="0" msgSize="3869" period="143" source="10" tMax="300" vl="33"/>
+        <dataFlow dest="12,9" id="Data Flow 34" jMax="0" msgSize="2262" period="299" source="11" tMax="300" vl="34"/>
+        <dataFlow dest="10,9,12" id="Data Flow 35" jMax="0" msgSize="191" period="277" source="11" tMax="300" vl="35"/>
+        <dataFlow dest="9,11" id="Data Flow 36" jMax="0" msgSize="3096" period="483" source="10" tMax="300" vl="36"/>
+        <dataFlow dest="10,9" id="Data Flow 37" jMax="0" msgSize="2205" period="238" source="11" tMax="300" vl="37"/>
+        <dataFlow dest="12,11,10" id="Data Flow 38" jMax="0" msgSize="3699" period="410" source="9" tMax="300" vl="38"/>
+        <dataFlow dest="9" id="Data Flow 39" jMax="0" msgSize="1799" period="104" source="12" tMax="300" vl="39"/>
+        <dataFlow dest="9" id="Data Flow 40" jMax="0" msgSize="3216" period="57" source="11" tMax="300" vl="40"/>
+        <dataFlow dest="10" id="Data Flow 41" jMax="0" msgSize="2686" period="295" source="11" tMax="300" vl="41"/>
+        <dataFlow dest="10,11,12" id="Data Flow 42" jMax="0" msgSize="1846" period="12" source="9" tMax="300" vl="42"/>
+        <dataFlow dest="12,9" id="Data Flow 43" jMax="0" msgSize="3120" period="284" source="11" tMax="300" vl="43"/>
+        <dataFlow dest="9,10" id="Data Flow 44" jMax="0" msgSize="1673" period="115" source="11" tMax="300" vl="44"/>
+        <dataFlow dest="12,9,10" id="Data Flow 45" jMax="0" msgSize="160" period="498" source="11" tMax="300" vl="45"/>
+        <dataFlow dest="11" id="Data Flow 46" jMax="0" msgSize="3802" period="274" source="12" tMax="300" vl="46"/>
+        <dataFlow dest="9" id="Data Flow 47" jMax="0" msgSize="1736" period="59" source="12" tMax="300" vl="47"/>
+        <dataFlow dest="9,12,11" id="Data Flow 48" jMax="0" msgSize="378" period="305" source="10" tMax="300" vl="48"/>
+        <dataFlow dest="10,11" id="Data Flow 49" jMax="0" msgSize="1648" period="473" source="12" tMax="300" vl="49"/>
+        <dataFlow dest="10" id="Data Flow 50" jMax="0" msgSize="1936" period="143" source="11" tMax="300" vl="50"/>
+        <dataFlow dest="9" id="Data Flow 51" jMax="0" msgSize="3942" period="449" source="10" tMax="300" vl="51"/>
+        <dataFlow dest="10,9,12" id="Data Flow 52" jMax="0" msgSize="1507" period="197" source="11" tMax="300" vl="52"/>
+        <dataFlow dest="10,12" id="Data Flow 53" jMax="0" msgSize="132" period="64" source="11" tMax="300" vl="53"/>
+        <dataFlow dest="10" id="Data Flow 54" jMax="0" msgSize="3499" period="343" source="11" tMax="300" vl="54"/>
+        <dataFlow dest="10,12,9" id="Data Flow 55" jMax="0" msgSize="46" period="164" source="11" tMax="300" vl="55"/>
+        <dataFlow dest="11,12" id="Data Flow 56" jMax="0" msgSize="3210" period="51" source="9" tMax="300" vl="56"/>
+        <dataFlow dest="12,9,10" id="Data Flow 57" jMax="0" msgSize="3899" period="415" source="11" tMax="300" vl="57"/>
+        <dataFlow dest="11,10" id="Data Flow 58" jMax="0" msgSize="647" period="171" source="9" tMax="300" vl="58"/>
+        <dataFlow dest="12" id="Data Flow 59" jMax="0" msgSize="1204" period="359" source="11" tMax="300" vl="59"/>
+        <dataFlow dest="10" id="Data Flow 60" jMax="0" msgSize="2619" period="82" source="9" tMax="300" vl="60"/>
+        <dataFlow dest="10,11,12" id="Data Flow 61" jMax="0" msgSize="679" period="302" source="9" tMax="300" vl="61"/>
+        <dataFlow dest="11,10" id="Data Flow 62" jMax="0" msgSize="513" period="12" source="12" tMax="300" vl="62"/>
+        <dataFlow dest="10" id="Data Flow 63" jMax="0" msgSize="3075" period="178" source="12" tMax="300" vl="63"/>
+        <dataFlow dest="9,10" id="Data Flow 64" jMax="0" msgSize="1347" period="377" source="12" tMax="300" vl="64"/>
+        <dataFlow dest="9,10" id="Data Flow 65" jMax="0" msgSize="2703" period="436" source="12" tMax="300" vl="65"/>
+        <dataFlow dest="9" id="Data Flow 66" jMax="0" msgSize="1363" period="475" source="10" tMax="300" vl="66"/>
+        <dataFlow dest="12,11,10" id="Data Flow 67" jMax="0" msgSize="386" period="303" source="9" tMax="300" vl="67"/>
+        <dataFlow dest="9,10" id="Data Flow 68" jMax="0" msgSize="3791" period="158" source="12" tMax="300" vl="68"/>
+        <dataFlow dest="9" id="Data Flow 69" jMax="0" msgSize="846" period="106" source="11" tMax="300" vl="69"/>
+        <dataFlow dest="11,10" id="Data Flow 70" jMax="0" msgSize="1551" period="499" source="12" tMax="300" vl="70"/>
+        <dataFlow dest="11,10" id="Data Flow 71" jMax="0" msgSize="2123" period="71" source="9" tMax="300" vl="71"/>
+        <dataFlow dest="11" id="Data Flow 72" jMax="0" msgSize="1267" period="316" source="12" tMax="300" vl="72"/>
+        <dataFlow dest="11,9,10" id="Data Flow 73" jMax="0" msgSize="2271" period="408" source="12" tMax="300" vl="73"/>
+        <dataFlow dest="10" id="Data Flow 74" jMax="0" msgSize="2568" period="256" source="12" tMax="300" vl="74"/>
+        <dataFlow dest="12" id="Data Flow 75" jMax="0" msgSize="1069" period="430" source="11" tMax="300" vl="75"/>
+        <dataFlow dest="11" id="Data Flow 76" jMax="0" msgSize="2690" period="234" source="10" tMax="300" vl="76"/>
+        <dataFlow dest="12" id="Data Flow 77" jMax="0" msgSize="929" period="27" source="11" tMax="300" vl="77"/>
+        <dataFlow dest="12,9,11" id="Data Flow 78" jMax="0" msgSize="1961" period="405" source="10" tMax="300" vl="78"/>
+        <dataFlow dest="9,11" id="Data Flow 79" jMax="0" msgSize="2980" period="212" source="12" tMax="300" vl="79"/>
+        <dataFlow dest="10" id="Data Flow 80" jMax="0" msgSize="1226" period="94" source="11" tMax="300" vl="80"/>
+        <dataFlow dest="11" id="Data Flow 81" jMax="0" msgSize="1938" period="296" source="9" tMax="300" vl="81"/>
+        <dataFlow dest="9" id="Data Flow 82" jMax="0" msgSize="3371" period="172" source="12" tMax="300" vl="82"/>
+        <dataFlow dest="12,9" id="Data Flow 83" jMax="0" msgSize="2183" period="93" source="10" tMax="300" vl="83"/>
+        <dataFlow dest="9,11" id="Data Flow 84" jMax="0" msgSize="1510" period="63" source="10" tMax="300" vl="84"/>
+        <dataFlow dest="11,9" id="Data Flow 85" jMax="0" msgSize="3421" period="199" source="10" tMax="300" vl="85"/>
+        <dataFlow dest="12,10" id="Data Flow 86" jMax="0" msgSize="3927" period="183" source="9" tMax="300" vl="86"/>
+        <dataFlow dest="12" id="Data Flow 87" jMax="0" msgSize="2662" period="34" source="11" tMax="300" vl="87"/>
+        <dataFlow dest="12,10" id="Data Flow 88" jMax="0" msgSize="1772" period="292" source="11" tMax="300" vl="88"/>
+        <dataFlow dest="10,12" id="Data Flow 89" jMax="0" msgSize="3612" period="364" source="11" tMax="300" vl="89"/>
+        <dataFlow dest="11" id="Data Flow 90" jMax="0" msgSize="843" period="104" source="12" tMax="300" vl="90"/>
+        <dataFlow dest="11,12,10" id="Data Flow 91" jMax="0" msgSize="1708" period="419" source="9" tMax="300" vl="91"/>
+        <dataFlow dest="11,10" id="Data Flow 92" jMax="0" msgSize="3610" period="368" source="9" tMax="300" vl="92"/>
+        <dataFlow dest="10,12" id="Data Flow 93" jMax="0" msgSize="512" period="53" source="9" tMax="300" vl="93"/>
+        <dataFlow dest="10,11" id="Data Flow 94" jMax="0" msgSize="738" period="142" source="12" tMax="300" vl="94"/>
+        <dataFlow dest="12,10,9" id="Data Flow 95" jMax="0" msgSize="1778" period="193" source="11" tMax="300" vl="95"/>
+        <dataFlow dest="11,10,12" id="Data Flow 96" jMax="0" msgSize="988" period="402" source="9" tMax="300" vl="96"/>
+        <dataFlow dest="11" id="Data Flow 97" jMax="0" msgSize="2396" period="439" source="12" tMax="300" vl="97"/>
+        <dataFlow dest="12" id="Data Flow 98" jMax="0" msgSize="2926" period="114" source="9" tMax="300" vl="98"/>
+        <dataFlow dest="11,10,12" id="Data Flow 99" jMax="0" msgSize="3460" period="381" source="9" tMax="300" vl="99"/>
+        <dataFlow dest="11,10,9" id="Data Flow 100" jMax="0" msgSize="983" period="122" source="12" tMax="300" vl="100"/>
+    </dataFlows>
+</afdxxml>
